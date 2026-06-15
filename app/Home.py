@@ -1,5 +1,14 @@
 import streamlit as st
 
+from pathlib import Path
+import pandas as pd
+
+BASE_DIR = Path(__file__).resolve().parent
+
+DATA_PATH = BASE_DIR / "data" / "customer_intelligence_dataset.csv"
+
+df = pd.read_csv(DATA_PATH)
+
 st.set_page_config(
     page_title="Airline Loyalty Intelligence",
     page_icon="✈️",
